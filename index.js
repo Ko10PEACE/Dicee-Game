@@ -1,7 +1,8 @@
 function changeImg(){
-    var randomNumber1 = (Math.random() * 6) + 1;
-    var randomNumber2 = (Math.random() * 6) + 1;
-
+    var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+    var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+    console.log(randomNumber1);
+    console.log(randomNumber2);
     if (randomNumber1 == 6) {
         var dice6 = document.getElementById('dice1');
         dice6.src = "https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_6-512.png";
@@ -23,7 +24,7 @@ function changeImg(){
     } else {
         alert("not working");
     }
-    
+
     if (randomNumber2 == 6) {
         var dice26 = document.getElementById('dice2');
         dice26.src = "https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_6-512.png";
@@ -44,12 +45,12 @@ function changeImg(){
         dice21.src = "https://cdn2.iconfinder.com/data/icons/dice-roll/100/dice_1-512.png";
     }
     
-    if (randomNumber1 > randomNUmber2){
+    if (randomNumber1 > randomNumber2){
         document.getElementById("refresh").innerHTML = "Player 1 Wins!";
-    } else if (randomNumber1 < randomNUmber2) {
-    document.getElementById("refresh").innerHTML = "Player 1 Wins!";
+    } else if (randomNumber1 < randomNumber2) {
+    document.getElementById("refresh").innerHTML = "Player 2 Wins!";
         
-    } else (randomNumber1 == randomNUmber2){
+    } else if (randomNumber1 == randomNumber2){
         document.getElementById("refresh").innerHTML = "Draw";
     }
 }
